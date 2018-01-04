@@ -26,6 +26,7 @@
     display: block;
     box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3);
     margin-bottom: 15px;
+    border-radius: 5px;
 }
 
 .qa-box label {
