@@ -15,11 +15,11 @@ cricApp.controller('homeController', ['$scope', 'cricdata', function($scope, cri
         angular.forEach(cricdata, function(correctAns, index) {
             if (correctAns.answer === Anslist[index]) {
                 right = right + 75;
-                if(wrong < 0){
-                    wrong =0;
+                if (wrong < 0) {
+                    wrong = 0;
                     wrong = wrong - 75;
                 }
-                
+
                 $scope.rightStyle = {
                     "height": right + "px"
                 };
@@ -27,12 +27,12 @@ cricApp.controller('homeController', ['$scope', 'cricdata', function($scope, cri
                     "height": wrong + "px"
                 };
             } else {
-                if(right < 0){
+                if (right < 0) {
                     right = 0;
                     right = right - 75;
                 }
                 wrong = wrong + 75;
-                
+
                 $scope.rightStyle = {
                     "height": right + "px"
                 };
@@ -42,7 +42,7 @@ cricApp.controller('homeController', ['$scope', 'cricdata', function($scope, cri
             }
         });
     };
-    this.clearform = function(Anslist){
+    this.clearform = function(Anslist) {
         Anslist.length = 0;
         var wrong = 0;
         $scope.wrongStyle = {
