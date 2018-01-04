@@ -1,8 +1,8 @@
-<div ng-controller="homeController as homectrl">
+<div ng-controller="homeController as homectrl" ng-style="currentHeight">
     <div class="container-fluid text-center">
         <div class="row content">
             <div class="col-md-6 text-left">
-                <form>
+                <form name="qForm">
                     <div class="form-group" ng-repeat="question in homectrl.questions">
                         <div class="col-md-12 qa-box no-padding">
                             <div class="col-md-12 question-style padding-t-5-b-5">
@@ -10,8 +10,10 @@
                             </div>
                             <div class="col-md-12 answer-style padding-t-20-b-20">
                                 <div class="col-md-4">
-                                    <select class="form-control" ng-model="selectedOption[$index]" ng-options="option for option in question.options">
-                                    </select> <!-- {{selectedOption}} -->
+                                    <select name="selectedOpt" class="form-control" ng-model="selectedOption[$index]" ng-options="option for option in question.options" required>
+                                            <option value="">Select Answer</option> 
+                                    </select>
+                                    <!-- {{selectedOption}} -->
                                 </div>
                             </div>
                         </div>

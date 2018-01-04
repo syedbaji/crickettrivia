@@ -1,5 +1,9 @@
 cricApp.controller('homeController', ['$scope', 'cricdata', function($scope, cricdata) {
     this.questions = cricdata;
+    //var currentH = window.innerHeight;
+    $scope.currentHeight = {
+        "min-height": window.innerHeight + "px"
+    };
 
     $scope.selectedOption = new Array(this.questions.length);
 
