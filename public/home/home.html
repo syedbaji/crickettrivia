@@ -11,19 +11,61 @@
                             <div class="col-md-12 answer-style padding-t-20-b-20">
                                 <div class="col-md-4">
                                     <select class="form-control" ng-model="selectedOption[$index]" ng-options="option for option in question.options">
-                                    </select> {{selectedOption}}
+                                    </select> <!-- {{selectedOption}} -->
                                 </div>
                             </div>
                         </div>
                     </div>
                     <button ng-click="homectrl.submit(selectedOption)" class="btn btn-default">Submit</button>
-                    <button type="submit" class="btn btn-default">Clear</button>
+                    <button ng-click="homectrl.clearform(selectedOption)" type="submit" class="btn btn-default">Clear</button>
                 </form>
             </div>
             <div class="col-md-6 sidenav">
                 <div class="well">
-                    <span class="incorrectAns" ng-style="wrongStyle">dfdf</span>
-                    <span class="correctAns" ng-style="rightStyle">dfdf</span>
+                    <table border="0" width="100%" id="main-table">
+                        <tr>
+                            <td valign="bottom">
+                                <table width="100%" class="side-table">
+                                    <tr>
+                                        <td valign="bottom">3.0</td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="bottom">2.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="bottom">2.0</td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="bottom">1.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="bottom">1.0</td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="bottom">0.5</td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="bottom">0.0</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td valign="bottom">
+                                <span class="incorrectAns" ng-style="wrongStyle"></span>
+                            </td>
+                            <td valign="bottom">
+                                <span class="correctAns" ng-style="rightStyle"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td>Incorrect Answers</td>
+                            <td>Correct Answers</td>
+                        </tr>
+                    </table>
+
+
                 </div>
             </div>
         </div>
